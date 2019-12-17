@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/name_group_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Название чата"
+        android:inputType="textShortMessage"
+        android:padding="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/create_group_btn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/add_user_btn"
+        android:layout_width="104dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/btn_theme"
+        android:onClick="onAddUser"
+        android:padding="8dp"
+        android:text="Добавить"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_group_edit" />
+
+    <EditText
+        android:id="@+id/name_user_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Логин пользователя"
+        android:inputType="textShortMessage"
+        android:padding="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/add_user_btn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_group_edit" />
+
+    <ListView
+        android:id="@+id/user_LV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:paddingRight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_user_edit" />
+
+    <Button
+        android:id="@+id/create_group_btn"
+        android:layout_width="134dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/btn_theme"
+        android:onClick="onCreateGroup"
+        android:padding="8dp"
+        android:text="Создать чат"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

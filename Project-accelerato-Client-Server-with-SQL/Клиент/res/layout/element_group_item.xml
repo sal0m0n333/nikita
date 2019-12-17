@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chats_theme">
+
+    <ImageView
+        android:id="@+id/group_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_group"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/group_id_txt"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center|left"
+        android:paddingLeft="1dp"
+        android:text="-GroupName-"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/group_img"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sub_info_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="left"
+        android:paddingLeft="1dp"
+        android:text="-subText-"
+        android:textSize="10sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/group_img"
+        app:layout_constraintTop_toBottomOf="@+id/group_id_txt" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="onDelete"
+        android:padding="12dp"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
